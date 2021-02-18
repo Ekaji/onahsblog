@@ -42,7 +42,7 @@ export const pageQuery = graphql`
           date(fromNow: true)
           title
           author
-          cartigories
+          tags
         }
         excerpt
         id
@@ -50,3 +50,22 @@ export const pageQuery = graphql`
     }
   }
 `
+
+// export const pageQuery = graphql`
+//   query MyQuery {
+//     blog: allMarkdownRemark {
+//       posts: nodes {
+//       fields {
+//           slug
+//         }
+//         frontmatter {
+//           date(fromNow: true)
+//           title
+//           author
+//         }
+//         excerpt
+//         id
+//       }
+//     }
+//   }
+// `

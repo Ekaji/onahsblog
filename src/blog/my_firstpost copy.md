@@ -2,7 +2,7 @@
 title: Awesome Blog Post Title 1
 author: Nikola
 date: 2020-07-15
-cartigories: javascript
+tags: javascript
 ---
 
 ## Introduction to my blog post 1

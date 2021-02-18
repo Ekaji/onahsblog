@@ -1,19 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from '../components/layout/Layout'
+// import Layout from '../components/layout/Layout'
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
 
   return (
-      <Layout>
-        
+    <div>
+      {/*  <Layout> */}
         <h1>{post.frontmatter.title}</h1>
         <small>{post.frontmatter.date}</small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Layout>
+      {/*  </Layout> */}
+      </div>
   )
 }
+
 export const query = graphql`
   query BlogQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
