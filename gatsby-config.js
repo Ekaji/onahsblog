@@ -3,8 +3,27 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-
 module.exports = {
   /* Your site config here */
-  plugins: [],
+siteMetadata: {
+  title: 'Onahs_Blog',
+  description: 'This is a tech blog by ekaji onah'  
+},
+plugins: [
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `images`,
+      path: `${__dirname}/src/images/`,
+    },
+  },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `blog`,
+      path: `${__dirname}/src/blog/`,
+    },
+  },
+  `gatsby-transformer-remark`,
+],
 }
