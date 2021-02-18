@@ -1,16 +1,17 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Layout from '../components/layout/Layout'
+import Footer from '../components/layout/Footer'
+import styles from '../styles/grid.module.css'
+import "normalize.css"
 
 export default function Blog({ data }) {
   const { posts } = data.blog;
 
-
   return (
-    <Layout>
     <div>
-      <h1>My blog posts</h1>
-
+      <h1>Onahs Blog</h1>
+      <h2>Articles</h2>
+     <div className={styles.articleGrid}>
       {posts.map(post => (
         <Link  to={post.fields.slug} >
           <article key={post.id}>
@@ -19,15 +20,20 @@ export default function Blog({ data }) {
             <p>{post.excerpt}</p>
           </article>
         </Link>
-      ))}
+          )
+        )
+      }
+     </div>
+     <Footer />
     </div>
-    </Layout>
   )
 }
 
 export const pageQuery = graphql`
   query MyQuery {
-    blog: allMarkdownRemark {
+    blog: allMarkdownRemark(
+      sort: {order: DESC, fields: [frontmatter___date]}
+    ) {
       posts: nodes {
         fields {
           slug
@@ -36,6 +42,7 @@ export const pageQuery = graphql`
           date(fromNow: true)
           title
           author
+          cartigories
         }
         excerpt
         id

@@ -2,6 +2,7 @@
 title: A complete guide on building a blog using gatsby
 author: Nikola
 date: 2021-02-16
+cartigories: gatsby
 ---
 
 
