@@ -35,18 +35,14 @@ export default function Blog({ data }) {
 
      <aside className='tags'>
         <h3 className='tags__heading'>Tags</h3>
-        <ul className='taglist' >
                 {uniqueTags.map((uniquetag, i) => (
-                  <li key={i}  
+                  <div className='taglist' key={i}  
                    style={
                     {
                       listStyleType: 'none',
                       backgroundColor: mrcp(),
                       borderRadius: '3px',
-                      padding: '5px 10px',
-                      // ?
-                      minWidth: '50px',
-                      width: '80%',
+                      padding: '7px 12px',
 
                     }
                   }
@@ -54,11 +50,10 @@ export default function Blog({ data }) {
                     <Link className='taglist__link--color'  to={`/tags/${uniquetag}`}>
                       {uniquetag}
                     </Link>
-                  </li>
+                  </div>
               )
             )
           }
-        </ul>
       </aside>
      </div>
      <Footer />

@@ -39,7 +39,9 @@
 
 }
 
-.taglist{
+.taglist {
+    margin: 10px 10px;
+    display: inline-block;
 }
 
 .taglist__link--color{
