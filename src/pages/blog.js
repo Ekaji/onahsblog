@@ -10,24 +10,26 @@ export default function Blog({ data }) {
   const { posts } = data.blog;
   let allTags = posts.map(post => post.frontmatter.tags )
   let uniqueTags = [...new Set(allTags)]
-  console.log(uniqueTags)
 
   return (
     <div className='blog'>
-      <div className='blog__container' > 
-      <h1 className='blog__heading'>Onahs Blog</h1>
-      <h2 className='blog__articles'>Articles</h2>
+      <div className='blog__container' >
+      <div className='blog__head'>
+        <h1 className='blog__heading'>Onahs Blog</h1>
+        <h2 className='blog__articles'>Articles</h2>
+      </div>
+      
      <div className='blog__articles--grid'>
-
       {posts.map(post => (
-        <Link  to={post.fields.slug} >
+          <Link className='link--color' to={post.fields.slug} >
           <article className='post' key={post.id}>
-            <h2 className='post__title'>{post.frontmatter.title}</h2>
-            <h4 className='post__tags'>{post.frontmatter.tags}</h4>
-            <p>{post.excerpt}</p>
-            <small className='post__details'>{post.frontmatter.author}, {post.frontmatter.date}</small>
+              <h2 className='post__title'>{post.frontmatter.title}</h2>
+              <h4 style={{display:'inline-block', backgroundColor: mrcp({color: 'blue', type: 'darken'}), color: 'white', borderRadius: '3px', padding: '7px 12px', margin: '30px 10px 10px'}}>{post.frontmatter.tags}</h4>
+              <p className='post__excerpt'>{post.excerpt}</p>
+              <small className='post__details'>{post.frontmatter.author}, {post.frontmatter.date}</small>
           </article>
-        </Link>
+          </Link>
+
           )
         )
       }
@@ -43,11 +45,10 @@ export default function Blog({ data }) {
                       backgroundColor: mrcp(),
                       borderRadius: '3px',
                       padding: '7px 12px',
-
                     }
                   }
                   >
-                    <Link className='taglist__link--color'  to={`/tags/${uniquetag}`}>
+                    <Link className='link--color' key={i} to={`/tags/${uniquetag}`}>
                       {uniquetag}
                     </Link>
                   </div>

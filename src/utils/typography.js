@@ -1,11 +1,9 @@
 import Typography from 'typography'
 import sternGroveTheme from 'typography-theme-stern-grove'
 
-const typography = new Typography(
-    sternGroveTheme,
-    {
-        baseFontSize: '14px',
-    }
-    )
+sternGroveTheme.baseFontSize = '18px'
+sternGroveTheme.bodyTypeFace = 'roboto'
+
+const typography = new Typography(sternGroveTheme)
 
 export default typography;
