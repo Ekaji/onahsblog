@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import Footer from '../components/layout/Footer'
 import "normalize.css"
 import '../styles/blog.styles.css'
-// import mrcp from 'material-random-color-picker'
+import mrcp from 'material-random-color-picker'
 
 
 export default function Blog({ data }) {
@@ -38,18 +38,18 @@ export default function Blog({ data }) {
         <ul className='taglist' >
                 {uniqueTags.map((uniquetag, i) => (
                   <li key={i}  
-                  //  style={
-                  //   {
-                  //     listStyleType: 'none',
-                  //     backgroundColor: mrcp(),
-                  //     borderRadius: '3px',
-                  //     padding: '5px 10px',
-                  //     // ?
-                  //     minWidth: '50px',
-                  //     width: '80%',
+                   style={
+                    {
+                      listStyleType: 'none',
+                      backgroundColor: mrcp(),
+                      borderRadius: '3px',
+                      padding: '5px 10px',
+                      // ?
+                      minWidth: '50px',
+                      width: '80%',
 
-                  //   }
-                  // }
+                    }
+                  }
                   >
                     <Link className='taglist__link--color'  to={`/tags/${uniquetag}`}>
                       {uniquetag}
