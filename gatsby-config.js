@@ -24,6 +24,7 @@ plugins: [
       path: `${__dirname}/src/blog/`,
     },
   },
+ 
   `gatsby-transformer-remark`,
 ],
 }

@@ -1,5 +1,47 @@
+
 .blog{
     display: flex;
     flex-direction: column;
+    word-wrap:inherit
+}
+
+.blog__container{
     margin: 10px;
+}
+
+.blog__headings{
+
+}
+
+.blog__articles{
+
+}
+
+.blog__articles--grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+}
+
+.post{
+
+}
+
+.post__title{
+    margin: 0px;
+}
+
+.post__tags{
+    margin: 30px 0px 10px;
+}
+
+.post__details{
+
+}
+
+.taglist{
+}
+
+.taglist__link--color{
+    color: black;
 }
