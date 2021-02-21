@@ -31,5 +31,6 @@ plugins: [
     },
   },
   `gatsby-transformer-remark`,
+  `gatsby-plugin-dark-mode`,
 ],
 }

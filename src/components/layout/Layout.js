@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from '../../styles/Layout.module.css'
-import Header from '../../components/layout/Header'
 import Footer from '../../components/layout/Footer'
+import ColorSchemeSwitch from '../../components/layout/ColorSchemeSwitch'
+import '../../styles/colorscheme.styles.css'
 import "normalize.css"
 
 const Layout = ({ children }) => {
     return(
         <div className={styles.Layout}>
-          <Header />
+          <ColorSchemeSwitch />
             <main style={{minHeight: '40vh'}}> {children} </main>
           <Footer />
         </div>

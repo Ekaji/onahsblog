@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Footer from '../components/layout/Footer'
-import "normalize.css"
+import Layout from '../components/layout/Layout'
 import '../styles/blog.styles.css'
 import mrcp from 'material-random-color-picker'
 
@@ -12,7 +11,8 @@ export default function Blog({ data }) {
   let uniqueTags = [...new Set(allTags)]
 
   return (
-    <div className='blog'>
+<Layout>
+<div className='blog'>
       <div className='blog__container' >
       <div className='blog__head'>
         <h1 className='blog__heading'>Onahs Blog</h1>
@@ -57,8 +57,8 @@ export default function Blog({ data }) {
           }
       </aside>
      </div>
-     <Footer />
     </div>
+    </Layout> 
   )
 }
 
