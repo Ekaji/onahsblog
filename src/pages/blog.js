@@ -35,8 +35,8 @@ export default function Blog({ data }) {
       }
      </div>
 
-     <aside className='tags'>
-        <h3 className='tags__heading'>Tags</h3>
+     <aside className='tag'>
+        <h3 className='tag__heading'>Tags</h3>
                 {uniqueTags.map((uniquetag, i) => (
                   <div className='taglist' key={i}  
                    style={

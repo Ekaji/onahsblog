@@ -8,7 +8,9 @@ sternGroveTheme.bodyTypeFace = 'roboto'
 sternGroveTheme.overrideThemeStyles = () => ({
     body: {
         '--bg': 'white ',
+        '--text': '#00000080',
         backgroundColor: 'var(--bg)',
+        color: 'var(--text)',
     },
     
     'body.dark': {
