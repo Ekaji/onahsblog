@@ -1,11 +1,11 @@
-
 .blog{
     display: flex;
     flex-direction: column;
     word-wrap: inherit;
     box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
+    margin: 5px;
 }
 
 .blog__container{
@@ -13,19 +13,22 @@
     margin: 0px;
 }
 
-.blog__headings{
-
+.blog__heading{
+    position: absolute;
+    left: 7px;
+    top: -15px;
 }
 
 .blog__articles{
-
+    /* margin-left: 7px; */
 }
 
 .blog__articles--grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 1rem;
-    margin: 0 20px
+    /* margin: 0px 20px */
+    padding:  20px;
 }
 
 .link--color{

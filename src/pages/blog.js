@@ -12,7 +12,7 @@ export default function Blog({ data }) {
 
   return (
 <Layout>
-<div className='blog'>
+  <div className='blog'>
       <div className='blog__container' >
       <div className='blog__head'>
         <h1 className='blog__heading'>Onahs Blog</h1>

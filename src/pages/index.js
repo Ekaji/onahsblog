@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import "normalize.css"
+// import "normalize.css"
 
 export default function Home({ data }) {
   const { title , description} = data.site.siteMetadata;

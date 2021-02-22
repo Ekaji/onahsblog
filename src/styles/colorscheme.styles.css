@@ -4,4 +4,5 @@ body{
 
 body.dark{
     background-color: black;
+    color: white;
 }

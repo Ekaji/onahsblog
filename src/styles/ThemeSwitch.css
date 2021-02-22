@@ -1,0 +1,7 @@
+.ThemeSwitch{
+    display: flex;
+    width: 100%;
+    padding: 15px 10px;
+    max-height: 40px;
+    justify-content: flex-end;
+}

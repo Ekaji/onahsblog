@@ -10,7 +10,7 @@ class ColorSchemeSwitch extends React.Component {
                     <DarkModeToggle
                     onChange = {e => toggleTheme(e ? 'dark' : 'light')}
                     checked = { theme === 'dark'}
-                    size = {80}
+                    size = {60}
                     speed = {2}
                     />
                 )}
