@@ -6,9 +6,6 @@ tags: gatsby
 featuredImage: ../images/BingWallpaper.jpg
 ---
 
-
-# Introduction
-
 ### Layout component
 layout component are for sections you want to reuse accross your site.
 examples of this are your navbar, hero section and footer, to create layout component create a layout folder

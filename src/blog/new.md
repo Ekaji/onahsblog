@@ -3,7 +3,7 @@ title: Awesome Blog Post Title 3
 author: Nikola
 date: 2020-07-15
 tags: css
-featuredImage: ../images/BingWallpaper.jpg
+featuredImage: ../images/24078.jpg
 ---
 
 ## Introduction to my 3 blog post

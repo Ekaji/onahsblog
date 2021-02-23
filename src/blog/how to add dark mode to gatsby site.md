@@ -3,7 +3,7 @@ title: How to add dark mode to gatsby website
 author: Ekaji
 date: 2021-02-23
 tags: gatsby
-featuredImage: ../images/BingWallpaper.jpg
+featuredImage: ../images/24078.jpg
 ---
 
 
