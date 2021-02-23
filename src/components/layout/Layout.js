@@ -3,7 +3,6 @@ import styles from '../../styles/Layout.module.css'
 import  '../../styles/ThemeSwitch.css'
 import Footer from '../../components/layout/Footer'
 import ColorSchemeSwitch from '../../components/layout/ColorSchemeSwitch'
-// import '../../styles/colorscheme.styles.css'
 import '../../styles/blog.styles.css'
 import "normalize.css"
 
