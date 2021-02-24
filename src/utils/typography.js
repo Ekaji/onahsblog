@@ -28,5 +28,6 @@ sternGroveTheme.overrideThemeStyles = () => ({
 })
 
 const typography = new Typography(sternGroveTheme)
+typography.injectStyles()
 
 export default typography;
