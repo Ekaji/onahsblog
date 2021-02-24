@@ -1,30 +1,29 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
-// import "normalize.css"
+import '../styles/portfolio.css'
+import "normalize.css"
+//components
+import Navbar from '../components/layout/Navbar'
+import LandingPage from '../components/portfolioComponent/LandingPage'
+import Projects from '../components/portfolioComponent/Projects'
+import About from '../components/portfolioComponent/About'
+import Contact from '../components/portfolioComponent/Contact'
+import Socials from '../components/portfolioComponent/Socials'
 
-export default function Home({ data }) {
-  const { title , description} = data.site.siteMetadata;
 
-  return (
-    <div>
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <Link to="/blog">Read my blog</Link>
-      <img alt='cute dog' src={data.image.publicURL} />
-    </div>
-    )
+export default function Home( ) {
+
+return (
+  <div className="container">
+    <Navbar />
+    <LandingPage />
+    <Projects />
+    <About />
+    <Contact />
+    <Socials />
+  </div> 
+  )
+    
 }
 
-export const pageQuery = graphql
-` query MetadataQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    },
-    image: file(base: {eq: "BingWallpaper.jpg"}){
-      publicURL
-    }
-  } `
+
   

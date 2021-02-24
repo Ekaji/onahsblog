@@ -1,0 +1,484 @@
+:root{
+    --border-dark: #090C08; 
+    --background-dark: #000000;
+    --text: #ddd5de;
+    --redish: #FF1744;
+}
+
+.animate__animated.animate__bounce {
+    --animate-duration: 10s;
+  }
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--background-dark);
+    color:  var(--text);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.navigation{
+    width: 100vw;
+    height: 10vh;
+    margin: 0px;
+}
+
+.logo{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    color:  var(--text);
+    z-index: 1000;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.menu-items{
+    display: none;
+}
+
+.menu{
+    position: fixed;
+    right: 10px;
+    margin-right: -10px;
+    overflow: hidden;
+    z-index: 500;
+}
+
+.hamburger-inner,
+.hamburger-inner::after, 
+.hamburger-inner::before,
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: white;
+}
+
+
+.is-active ~ .menu-items{
+    display: block;
+    position: fixed;
+    background-color: var(--background-dark);
+    margin: 0px;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    width: 100vw;
+    margin: 0; 
+    margin-right: -10px;
+    z-index: -2;
+}
+
+.items > ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+    height: 100vh;
+    margin-left: -20px;
+}
+
+.items > ul > li > a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin: 20px;
+    color:  var(--text);
+    z-index: 9;
+    font-size: 20px;
+}
+
+.landing{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px;
+}
+
+.greeting{
+    color:  var(--redish);
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.myname > span{
+    margin: 10px 0px;
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+
+.myname > span, .name{
+    font-Size: 58px;
+    line-height: 57px;
+}
+
+.name{
+    color:  var(--redish);
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.project > h2{
+    text-align: center;
+    text-transform: uppercase;
+    color:  var(--redish);
+}
+
+.card{
+    position: relative;
+    height: 40vh;
+    width: 80vw;
+    border-radius: 10px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.card.blueskies{
+    border: 3px solid #00FFFF;
+}
+
+.card.bookmark{
+    border: 3px solid #3F59DA;
+}
+
+.card.landa{
+    border: 3px solid #710627;
+}
+
+.card.daytoday{
+    border: 3px solid #067E79;
+}
+
+/* .card.blueskies, .card.landa{
+    margin-left: -90vw;
+} */
+
+/* .card.bookmark, .card.daytoday{
+    margin-right: -90vw;
+} */
+
+.card > a{
+    text-decoration: none;
+    color:  var(--text)
+}
+
+.card-image{
+    height: 50%;
+    width: 100%;
+}
+
+.card-text{
+    margin-top: -20px;
+    height: 100%;
+    width: 100%;
+}
+
+.card-text > h3{
+    padding-top: 10px;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.card-text > p{
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 130vh;
+}
+
+.intro{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin-bottom: 50px;
+}
+
+.intro > h2, .my-stack > h2{
+    color:  var(--redish);
+    margin-bottom: -2px;
+}
+
+.intro > p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100 !important;
+}
+
+.intro > img{
+    height: 150px;
+    width: 150px;
+}
+
+.my-stack{
+    width: 80vw;
+}
+
+.my-stack > h2{
+    text-align: center;
+}
+
+.stack{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.stack-icon{
+    display: flex;
+    width: calc(50vw / 3 ) ;
+    height: 110px;
+    border-radius: 5px;
+    margin: 10px auto ;
+}
+
+.stack-icon > img{
+    margin:  auto;
+}
+
+.contact, .socials{
+    background-color: var(--redish);
+    color:  var(--border-dark);
+    letter-spacing: 2px;
+}
+
+.contact > p,
+.contact > div,
+.socials > h2,
+.socials > div{
+    margin-left: 6px;
+}
+
+
+.getintouch, 
+.getintouch > a,
+.connect {
+    font-size: 22px;
+    color:  var(--border-dark);
+}
+
+.getintouchText{
+    margin-top: -1px;
+}
+
+.email > div {
+    display: flex;
+}
+
+.email > div > p {
+    margin-left: 10px;
+}
+
+.socials-icons {
+    display: flex;
+}
+
+.socials-icons > div{
+    display: flex;
+    font-size: 15px;
+    /* margin-right: 10px; */
+}
+
+.socials-icons > div > p > a,
+.email > div > p > a {
+    color:  var(--border-dark);
+    text-decoration: none;
+}
+
+.socials > p, .getintouch {
+    margin-bottom: -2px;
+}
+
+.footer{
+    text-align: center;
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .landing{
+        height: 100vh;
+    }
+
+    .card-text > h3{
+        padding-top: 5px;
+        padding-left: 5px;
+        font-Size: 18px;
+    }
+
+    .myname > span, .name{
+        font-Size: 50px;
+        line-height: 49px;
+    }
+    .about{
+        height: 150vh;
+    }
+   .socials-icons{
+       flex-direction:column;
+   }
+}
+
+
+/* tablets */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .landing{
+        height: 100vh;
+    }
+    .about{
+        height: 80vh;
+    }
+
+    .intro{
+        height: 30vh;
+    }
+
+    .my-stack{
+        width: 80vw;
+    }
+}
+
+/* laptops */
+@media screen
+    and (min-device-width: 770px)
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .myname > span, .name{
+        font-Size: 85px;
+        line-height: 84px;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .intro, .my-stack{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 40vh;
+    }
+
+    .intro > p{
+        width: 30vw;
+        font-weight: 100;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    div.menu-items{
+        display: flex;
+    }
+
+    .items{
+        position: fixed;
+        transform-origin: left top;
+        transform:rotate(90deg);
+        -webkit-transform-origin: left top;
+        -webkit-transform:rotate(90deg);
+    }
+
+    .items > ul> li > a{
+        letter-spacing: 2px;
+        margin-left: 15px;
+        text-transform: uppercase;
+    }
+
+    .items > ul{
+        flex-direction: row;
+        height: 10vh;
+    }
+
+    .landing{
+        width: 90vw;
+        height: 90vh;
+        margin: auto;
+    }
+
+    .myimg{
+        display: flex;
+        justify-content: center;
+        width: 40vw;
+    }
+    
+    .myimg > img{
+        object-fit: cover;
+        width: 30vw;
+        height: 80vh;
+    }
+
+    .project-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 5vh 10vw;
+    }
+
+    .card{
+        height: 60vh;
+        width: 35vw;
+        border-radius: 10px;
+        /* margin: 20px auto; */
+        overflow: hidden;
+    }
+
+    /* .card.blueskies, .card.landa{
+        margin-left: -90vw;
+    } */
+    
+    /* .card.bookmark, .card.daytoday{
+        margin-right: -90vw;
+    } */
+
+    .contact{
+        margin-top: -40vh;
+    }
+
+.contact > p,
+.contact > div,
+.socials > h2,
+.socials > p,
+.socials > div{
+    margin-left: 40px;
+}
+  }

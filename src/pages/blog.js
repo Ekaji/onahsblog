@@ -11,7 +11,7 @@ export default function Blog({ data }) {
   const { posts } = data.blog;
   let allTags = posts.map(post => post.frontmatter.tags )
   let uniqueTags = [...new Set(allTags)]
-
+  
   return (
 <Layout>
   <div className='blog'>
