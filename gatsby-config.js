@@ -38,7 +38,21 @@ plugins: [
       path: `${__dirname}/src/images/`,
     },
   },
-  `gatsby-transformer-remark`,
+  // `gatsby-transformer-remark`,
   `gatsby-plugin-dark-mode`,
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-remark-highlight-code`,
+          options: {
+            terminal: 'carbon',
+            theme: 'blackboard'
+          }
+        },
+      ],
+    },
+  },
 ],
 }

@@ -5,6 +5,8 @@ import Footer from '../../components/layout/Footer'
 import ColorSchemeSwitch from '../../components/layout/ColorSchemeSwitch'
 import '../../styles/blog.styles.css'
 import "normalize.css"
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+deckDeckGoHighlightElement();
 
 const Layout = ({ children }) => {
     return(
