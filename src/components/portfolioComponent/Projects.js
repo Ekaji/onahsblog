@@ -1,9 +1,9 @@
 import React from 'react'
 // images
-import bluesky from '../../images/portfolioImages/bluesky.png'
-import bookmark from '../../images/portfolioImages/bookmark.png'
-import daytoday from '../../images/portfolioImages/daytoday.png'
-import landa from '../../images/portfolioImages/landa2.png'
+import bluesky from '../../images/portfolioImages/weathetr app.png'
+import bookmark from '../../images/portfolioImages/bkmark.png'
+import daytoday from '../../images/portfolioImages/todo.png'
+import landa from '../../images/portfolioImages/landa.png'
 
 
 const Projects = () => {
