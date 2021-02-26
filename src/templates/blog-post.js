@@ -1,19 +1,49 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import Layout from '../components/layout/Layout'
 import Img from "gatsby-image"
 
-export default function BlogPost({ data }) {
+export default function BlogPost({ data, pageContext }) {
   const post = data.markdownRemark
+  const { previous, next } = pageContext
+  console.log(pageContext)
   let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
 
 
   return (
-    <div>
+    <Layout>
+      <div style={{margin: '5px 1rem'}}>
       <Img fluid={featuredImgFluid} />
         <h1>{post.frontmatter.title}</h1>
         <small>{post.frontmatter.date}</small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+
+        <ul
+                style={{
+                    display: `flex`,
+                    flexWrap: `wrap`,
+                    justifyContent: `space-between`,
+                    listStyle: `none`,
+                    padding: 0,
+                }}
+            >
+                <li>
+                    {previous && (
+                        <Link to={previous.fields.slug} rel="prev">
+                            {"<<"+previous.frontmatter.title}
+                        </Link>
+                    )}
+                </li>
+                <li>
+                    {next && (
+                        <Link to={next.fields.slug} rel="next">
+                            {next.frontmatter.title + " >>"}
+                        </Link>
+                    )}
+                </li>
+            </ul>
+            </div>
+      </Layout>
   )
 }
 

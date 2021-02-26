@@ -48,7 +48,7 @@ plugins: [
           resolve: `gatsby-remark-highlight-code`,
           options: {
             terminal: 'carbon',
-            theme: 'blackboard'
+            theme: 'shades-of-purple'
           }
         },
       ],

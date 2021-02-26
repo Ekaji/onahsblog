@@ -14,7 +14,9 @@ const Layout = ({ children }) => {
           <div className='ThemeSwitch'>
             <ColorSchemeSwitch />
           </div>
-            <main style={{minHeight: '40vh'}}> {children} </main>
+            <main >
+             {children}
+            </main>
           <Footer />
         </div>
     )

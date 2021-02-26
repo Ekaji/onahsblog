@@ -61,10 +61,11 @@ export default function Blog({ data }) {
       </aside>
      </div>
     </div>
-    </Layout> 
+</Layout> 
   )
 }
 
+//if site breaks or you notice strange behaviour add MyQuery query
 export const pageQuery = graphql`
   query MyQuery {
     file(relativePath: { eq: "images/corgi.jpg" }) {

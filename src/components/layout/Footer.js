@@ -5,10 +5,10 @@ import Socials from '../portfolioComponent/Socials'
 
 const Footer = () => {
     return (
-        <footer className={styles.footer}>
+        <div className={styles.footer}>
             <Contact />
             <Socials />
-        </footer>
+        </div>
     )
 }
 

@@ -17,15 +17,18 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 //
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
-
+  //
+  const blogListTemplate = path.resolve(`./src/templates/blog-list.js`)
+//
   const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`)
   const tagTemplate = path.resolve(`./src/templates/tags.js`)
 
+  //limit was 2000
   const result = await graphql(`
-    {
+  query loadSlugQuery ($limit: Int!){
       postsRemark: allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 2000
+        sort: { fields: [frontmatter___date], order: DESC  }
+        limit: $limit
       ) {
         edges {
           node {
@@ -34,6 +37,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             }
             frontmatter {
               tags
+              title
             }
           }
         }
@@ -44,7 +48,50 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
-  `)
+   `,
+    { limit: 2000}).then(result => {
+    // const posts = result.data.allMarkdownRemark.edges
+    const posts = result.data.postsRemark.edges
+
+    posts.forEach((post, index, ) => {
+        // create prev and next on each posts render (for Blog Post Pagination, BPP)
+        const previous = index === posts.length - 1 ? null : posts[index + 1].node
+        const next = index === 0 ? null : posts[index - 1].node
+
+        // previous and next are objects props sent as pageContect object to blogPostTemplate
+        createPage({
+            path: post.node.fields.slug,
+            component: blogPostTemplate,
+            context: {
+                slug: post.node.fields.slug,
+                previous,
+                next,
+            },
+        })
+    })
+
+
+       // Create blog list pages (for Blog List Pagination, BLP)
+        // Assign path /2, /3, p/4, etc
+        const postsPerPage = 6
+        const numPages = Math.ceil(posts.length / postsPerPage)
+
+        Array.from({ length: numPages }).forEach((_, i) => {
+            createPage({
+                path: i === 0 ? `/` : `${i + 1}`,
+                component: blogListTemplate,
+                context: {
+                    limit: postsPerPage,
+                    skip: i * postsPerPage,
+                    numPages,
+                    currentPage: i + 1
+                },
+            });
+        });
+
+
+          // here
+
   
 
   // handle errors
@@ -69,16 +116,24 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
 
-const posts = result.data.postsRemark.edges
- posts.forEach(({ node }) => {
-        createPage({
-          path: node.fields.slug,
-          component: blogPostTemplate,
-          context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
-            slug: node.fields.slug,
-          },
-        })
-      })
+// const posts = result.data.postsRemark.edges
+
+//  posts.forEach(({ node }) => {
+
+//         createPage({
+//           path: node.fields.slug,
+//           component: blogPostTemplate,
+//           context: {
+//             // Data passed to context is available
+//             // in page queries as GraphQL variables.
+//             slug: node.fields.slug,
+//           },
+//         })
+//       })
+
+    })
+
+
 }
+
+//resolve conflicts between posts
