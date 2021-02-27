@@ -1,19 +1,19 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from '../components/layout/Layout'
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
 export default function BlogPost({ data, pageContext }) {
   const post = data.markdownRemark
   const { previous, next } = pageContext
   console.log(pageContext)
-  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
+  // let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
 
 
   return (
     <Layout>
       <div style={{margin: '5px 1rem'}}>
-      <Img fluid={featuredImgFluid} />
+      {/* <Img fluid={featuredImgFluid} /> */}
         <h1>{post.frontmatter.title}</h1>
         <small>{post.frontmatter.date}</small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -53,7 +53,7 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date
+        date(fromNow: true, formatString: "DD MMMM, YYYY")
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {

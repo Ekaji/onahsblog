@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    font-family: Montserrat, sans-serif;
+    /* font-family: Montserrat, sans-serif; */
 }
 
 .navigation{

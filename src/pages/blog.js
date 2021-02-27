@@ -29,7 +29,9 @@ export default function Blog({ data }) {
               <h2 className='post__title'>{post.frontmatter.title}</h2>
               <h4 style={{display:'inline-block', backgroundColor: mrcp({color: 'blue', type: 'darken'}), color: 'white', borderRadius: '3px', padding: '7px 12px', margin: '30px 10px 10px'}}>{post.frontmatter.tags}</h4>
               {/* <p className='post__excerpt'>{post.excerpt}</p> */}
-              <small className='post__details'>{post.frontmatter.author}, {post.frontmatter.date}</small>
+              <small className='post__details'>{post.frontmatter.author},
+               {post.frontmatter.date}
+               </small>
           </article>
           </Link>
 
@@ -84,7 +86,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(fromNow: true)
+          date(fromNow: true, formatString: "DD MMMM, YYYY")
           title
           author
           tags

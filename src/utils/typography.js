@@ -11,6 +11,7 @@ sternGroveTheme.overrideThemeStyles = () => ({
         '--text': '#00000080',
         backgroundColor: 'var(--bg)',
         color: 'var(--text)',
+        fontFamily: 'Montserrat, sans-serif',
     },
     
     'body.dark': {
@@ -18,6 +19,11 @@ sternGroveTheme.overrideThemeStyles = () => ({
         '--text': ' #FFEBCF',
         backgroundColor: 'var(--bg)',
         color: 'var(--text)',
+        fontFamily: 'Montserrat, sans-serif',
+    },
+    p : {
+        fontSize: '14.4px',
+        letterSpacing: '1.1px'
     },
     'h1,h2': {
         color: 'var(--text)',
