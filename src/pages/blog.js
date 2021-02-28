@@ -28,8 +28,11 @@ export default function Blog({ data }) {
           {/* <Img style={{height: '150px'}} fluid={post.frontmatter.featuredImage.childImageSharp.fluid} /> */}
               <h2 className='post__title'>{post.frontmatter.title}</h2>
               <div className='post__info'>
-                <h4 style={{display:'inline-block', backgroundColor: mrcp({color: 'blue', type: 'darken'}), color: 'white', borderRadius: '3px', padding: '7px 12px', margin: '30px 10px 10px'}}>{post.frontmatter.tags}
+                <Link to={`/tags/${post.frontmatter.tags}`}>
+                  <h4 style={{display:'inline-block', backgroundColor: mrcp({color: 'blue', type: 'darken'}), color: 'white', borderRadius: '3px', padding: '7px 12px', margin: '30px 10px 10px'}}>{post.frontmatter.tags}
                 </h4>
+                </Link>
+                
                   {post.frontmatter.date}
               </div>
              
