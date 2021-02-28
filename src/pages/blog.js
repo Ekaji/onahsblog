@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from '../components/layout/Layout'
 import '../styles/blog.styles.css'
 import mrcp from 'material-random-color-picker'
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
 
 
@@ -25,13 +25,17 @@ export default function Blog({ data }) {
       {posts.map(post => (
           <Link className='link--color' to={post.fields.slug} >
           <article className='post' key={post.id}>
-          <Img style={{height: '150px'}} fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
+          {/* <Img style={{height: '150px'}} fluid={post.frontmatter.featuredImage.childImageSharp.fluid} /> */}
               <h2 className='post__title'>{post.frontmatter.title}</h2>
-              <h4 style={{display:'inline-block', backgroundColor: mrcp({color: 'blue', type: 'darken'}), color: 'white', borderRadius: '3px', padding: '7px 12px', margin: '30px 10px 10px'}}>{post.frontmatter.tags}</h4>
-              {/* <p className='post__excerpt'>{post.excerpt}</p> */}
-              <small className='post__details'>{post.frontmatter.author},
-               {post.frontmatter.date}
-               </small>
+              <div className='post__info'>
+                <h4 style={{display:'inline-block', backgroundColor: mrcp({color: 'blue', type: 'darken'}), color: 'white', borderRadius: '3px', padding: '7px 12px', margin: '30px 10px 10px'}}>{post.frontmatter.tags}
+                </h4>
+                  {post.frontmatter.date}
+              </div>
+             
+
+               {/* <p className='post__excerpt'>{post.excerpt}</p> */}
+              {/* <small className='post__details'>{post.frontmatter.author} </small> */}
           </article>
           </Link>
 
