@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import { graphql, Link } from "gatsby"
 import Layout from '../components/layout/Layout'
 import '../styles/blog.styles.css'
@@ -11,6 +11,16 @@ export default function Blog({ data }) {
   const { posts } = data.blog;
   let allTags = posts.map(post => post.frontmatter.tags )
   let uniqueTags = [...new Set(allTags)]
+
+  const postCount = 1
+  const [postsToShow, setPostsToShow] = useState(postCount)
+  const [blogList, setBloglist] = useState(posts.slice(0, postsToShow))
+
+  const handleLoadMorePosts = () => {
+    setPostsToShow( postsToShow + postCount)
+    setBloglist([...posts.slice(0, postsToShow) ])
+  }
+
   
   return (
 <Layout>
@@ -22,7 +32,7 @@ export default function Blog({ data }) {
       </div>
       
      <div className='blog__articles--grid'>
-      {posts.map(post => (
+      {blogList.map(post => (
           <Link className='link--color' to={post.fields.slug} >
           <article className='post' key={post.id}>
           {/* <Img style={{height: '150px'}} fluid={post.frontmatter.featuredImage.childImageSharp.fluid} /> */}
@@ -30,22 +40,22 @@ export default function Blog({ data }) {
               <div className='post__info'>
                 <Link to={`/tags/${post.frontmatter.tags}`}>
                   <h4 style={{display:'inline-block', backgroundColor: mrcp({color: 'blue', type: 'darken'}), color: 'white', borderRadius: '3px', padding: '7px 12px', margin: '30px 10px 10px'}}>{post.frontmatter.tags}
-                </h4>
+                  </h4>
                 </Link>
-                
-                  {post.frontmatter.date}
+                {post.frontmatter.date}
               </div>
-             
-
                {/* <p className='post__excerpt'>{post.excerpt}</p> */}
               {/* <small className='post__details'>{post.frontmatter.author} </small> */}
           </article>
           </Link>
-
           )
         )
-      }
+      } 
      </div>
+
+     <div style={{textAlign: 'center', margin: 'auto'}} >
+      <button   onClick={ handleLoadMorePosts }>loadMore</button>
+    </div>
 
      <aside className='tag'>
         <h3 className='tag__heading'>Tags</h3>
