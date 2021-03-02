@@ -27,7 +27,7 @@ export default function Blog({ data }) {
   <div className='blog'>
       <div className='blog__container' >
       <div className='blog__head'>
-        <h1 className='blog__heading'>Onahs Blog</h1>
+        {/* <h1 className='blog__heading'>Onahs Blog</h1> */}
         <h2 className='blog__articles'>Articles</h2>
       </div>
       

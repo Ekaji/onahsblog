@@ -1,6 +1,10 @@
-.navigation{
+ .navigation {
     display: inline-flex;
-    width: 30%;
-    padding-left: 0px;
-    margin-left: 0px;
+    justify-content: flex-end;
+    width: auto;
+}
+ .navigation > a {
+    margin: auto 5px;
+    text-transform: uppercase;
+    color: var(--text);
 }
