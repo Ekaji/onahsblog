@@ -6,7 +6,6 @@ import Layout from '../components/layout/Layout'
 export default function BlogPost({ data, pageContext }) {
   const post = data.markdownRemark
   const { previous, next } = pageContext
-  console.log(pageContext)
   // let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
 
 

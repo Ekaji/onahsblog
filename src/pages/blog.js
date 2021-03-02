@@ -12,7 +12,7 @@ export default function Blog({ data }) {
   let allTags = posts.map(post => post.frontmatter.tags )
   let uniqueTags = [...new Set(allTags)]
 
-  const postCount = 1
+  const postCount = 5
   const [postsToShow, setPostsToShow] = useState(postCount)
   const [blogList, setBloglist] = useState(posts.slice(0, postsToShow))
 
@@ -33,9 +33,8 @@ export default function Blog({ data }) {
       
      <div className='blog__articles--grid'>
       {blogList.map(post => (
-          <Link className='link--color' to={post.fields.slug} >
           <article className='post' key={post.id}>
-          {/* <Img style={{height: '150px'}} fluid={post.frontmatter.featuredImage.childImageSharp.fluid} /> */}
+          <Link className='link--color' key={post.id} to={post.fields.slug} >
               <h2 className='post__title'>{post.frontmatter.title}</h2>
               <div className='post__info'>
                 <Link to={`/tags/${post.frontmatter.tags}`}>
@@ -44,10 +43,11 @@ export default function Blog({ data }) {
                 </Link>
                 {post.frontmatter.date}
               </div>
-               {/* <p className='post__excerpt'>{post.excerpt}</p> */}
-              {/* <small className='post__details'>{post.frontmatter.author} </small> */}
-          </article>
           </Link>
+          </article>
+          /* <p className='post__excerpt'>{post.excerpt}</p> */
+          /* <small className='post__details'>{post.frontmatter.author} </small> */
+          /* <Img style={{height: '150px'}} fluid={post.frontmatter.featuredImage.childImageSharp.fluid} /> */
           )
         )
       } 
@@ -84,7 +84,6 @@ export default function Blog({ data }) {
   )
 }
 
-//if site breaks or you notice strange behaviour add MyQuery query
 export const pageQuery = graphql`
   query MyQuery {
     file(relativePath: { eq: "images/corgi.jpg" }) {
@@ -121,22 +120,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-// export const pageQuery = graphql`
-//   query MyQuery {
-//     blog: allMarkdownRemark {
-//       posts: nodes {
-//       fields {
-//           slug
-//         }
-//         frontmatter {
-//           date(fromNow: true)
-//           title
-//           author
-//         }
-//         excerpt
-//         id
-//       }
-//     }
-//   }
-// `

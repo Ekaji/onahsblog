@@ -1,0 +1,25 @@
+.tag{
+    min-height: 60vh;
+}
+.tag__comp{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 1rem;
+    margin: 0px 20px
+}
+
+.tag__list{
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    height: 50px;
+}
+
+.tag__list:hover {
+    height: 55px;
+}
+
+.tag__link{
+    width: 100%;
+}

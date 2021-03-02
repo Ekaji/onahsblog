@@ -13,7 +13,7 @@ const LandingPage = () => {
     
 const [greeting, setGreeting] = useState((Object.values(helloArray[0])))
     
-        useEffect(() => {
+    useEffect(() => {
       let i = 0;
       const updateGreeting = () => {
       setGreeting( helloArray[i]);

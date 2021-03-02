@@ -1,8 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
+import '../styles/tag.styles.css'
 
 // Components
 import { Link, graphql } from "gatsby"
+import Layout from '../components/layout/Layout'
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -12,21 +14,25 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`
 
   return (
-    <div>
+    <Layout>
+      <div className='tag'>
       <h1>{tagHeader}</h1>
-      <ul>
+      <ul className='tag__comp'>
         {edges.map(({ node }) => {
           const { slug } = node.fields
           const { title } = node.frontmatter
           return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
+            <Link className='tag__link' to={slug}>
+              <li className='tag__list'  key={slug}>
+                {title}
+              </li>
+            </Link>
           )
         })}
       </ul>
       <Link to="/tags">All tags</Link>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

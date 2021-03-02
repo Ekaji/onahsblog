@@ -8,6 +8,9 @@ import kebabCase from "lodash/kebabCase"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 
+import Layout from '../components/layout/Layout'
+import '../styles/tag.styles.css'
+
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
@@ -16,21 +19,23 @@ const TagsPage = ({
     },
   },
 }) => (
-  <div>
+  <Layout>
     <Helmet title={title} />
-    <div>
+    <div className='tag'>
       <h1>Tags</h1>
-      <ul>
+      <ul className='tag__comp'>
         {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+        <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+          <li className='tag__list' key={tag.fieldValue}>
               {tag.fieldValue} ({tag.totalCount})
-            </Link>
           </li>
+        </Link>
+
         ))}
       </ul>
     </div>
-  </div>
+  </Layout>
+
 )
 
 TagsPage.propTypes = {
