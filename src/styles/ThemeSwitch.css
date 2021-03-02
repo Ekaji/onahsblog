@@ -1,7 +1,13 @@
 .ThemeSwitch{
     display: flex;
     width: 100%;
-    padding: 15px 10px;
-    max-height: 40px;
+    height: 60px;
     justify-content: flex-end;
+    box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.ThemeSwitch > button{
+    margin: auto 10px;
 }

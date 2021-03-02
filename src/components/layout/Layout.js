@@ -12,6 +12,7 @@ const Layout = ({ children }) => {
     return(
         <div className={styles.Layout}>
           <div className='ThemeSwitch'>
+            
             <ColorSchemeSwitch />
           </div>
             <main >

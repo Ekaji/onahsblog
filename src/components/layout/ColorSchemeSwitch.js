@@ -5,7 +5,7 @@ import DarkModeToggle from 'react-dark-mode-toggle'
 class ColorSchemeSwitch extends React.Component {
     render() {
         return (
-            <ThemeToggler>
+            <ThemeToggler >
                 {({ theme, toggleTheme }) => (
                     <DarkModeToggle
                     onChange = {e => toggleTheme(e ? 'dark' : 'light')}
