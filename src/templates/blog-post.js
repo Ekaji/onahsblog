@@ -14,7 +14,7 @@ export default function BlogPost({ data, pageContext }) {
       <div style={{margin: '5px 1rem'}}>
       {/* <Img fluid={featuredImgFluid} /> */}
         <h1>{post.frontmatter.title}</h1>
-        <small>{post.frontmatter.date}</small>
+        <small>published {post.frontmatter.date}</small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <ul

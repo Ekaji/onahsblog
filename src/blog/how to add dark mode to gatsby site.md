@@ -6,7 +6,7 @@ tags: gatsby
 featuredImage: ../images/24078.jpg
 ---
 
-
+##
 to add dark mode to your gatsby blog you would need to install gatsby-plugin-dark-mode and react-dark-mode-toggle. to do this run the following your terminal.
 
 for NPM
