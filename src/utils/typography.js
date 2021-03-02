@@ -7,15 +7,16 @@ sternGroveTheme.bodyTypeFace = 'roboto'
 
 sternGroveTheme.overrideThemeStyles = () => ({
     'body.light': {
-        '--bg': 'white ',
-        '--text': '#00000080',
+        '--bg': ' #FFEBCF',
+        // '--text': '#00000080',
+        '--text': '#374045',
         backgroundColor: 'var(--bg)',
         color: 'var(--text)',
         fontFamily: 'Montserrat, sans-serif',
     },
     
     'body.dark': {
-        '--bg': '#374045 ',
+        '--bg': '#374045',
         '--text': ' #FFEBCF',
         backgroundColor: 'var(--bg)',
         color: 'var(--text)',
