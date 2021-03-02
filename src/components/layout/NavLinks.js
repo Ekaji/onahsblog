@@ -4,13 +4,13 @@ import '../../styles/navlinks.style.css'
 
 const NavLinks = () => {
     const allLinks = [
-        {home: '/'},
+        {portfolio: '/'},
         {blog: '/blog'}
     ];
 
     return(
         <div className='navigation'>
-        <h1 className='blog__heading'>Ekaji Onah</h1>
+        {/* <h1 className='blog__heading'>Ekaji Onah</h1> */}
             {allLinks.map(link => ( 
                 <Link to={`${Object.values(link)}`} >
                     <span>{Object.keys(link)}</span>
