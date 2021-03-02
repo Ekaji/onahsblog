@@ -14,8 +14,10 @@
 
 .blog__heading{
     position: absolute;
-    left: 1rem;
-    top: -15px;
+    left: 0.3rem;
+    top: 16px;
+    font-size: 25px;
+    margin-top: auto;
 }
 
 .blog__articles{

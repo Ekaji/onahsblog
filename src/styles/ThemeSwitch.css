@@ -8,6 +8,18 @@
     -moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
+.ThemeSwitch > .navigation {
+    display: inline-flex;
+    width: auto;
+}
+
+.ThemeSwitch > .navigation > a {
+    margin: auto 5px;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+
 .ThemeSwitch > button{
-    margin: auto 10px;
+    margin: auto 10px auto 5px;
 }

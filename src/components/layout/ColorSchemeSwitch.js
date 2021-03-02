@@ -1,7 +1,6 @@
 import React from 'react'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import DarkModeToggle from 'react-dark-mode-toggle'
-
 class ColorSchemeSwitch extends React.Component {
     render() {
         return (
