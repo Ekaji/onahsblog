@@ -266,10 +266,9 @@
     margin:  auto;
 }
 
-.contact, .socials{
-    /* background-color: var(--redish);
-    color:  var(--border-dark); */
-    letter-spacing: 2px;
+.contact {
+    display: flex;
+    flex-direction: row;
 }
 
 .contact > p,

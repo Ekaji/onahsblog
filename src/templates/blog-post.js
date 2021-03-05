@@ -20,20 +20,33 @@ export default function BlogPost({ data, pageContext }) {
         <ul
                 style={{
                     display: `flex`,
-                    flexWrap: `wrap`,
+                    flexDirection: `row`,
                     justifyContent: `space-between`,
                     listStyle: `none`,
                     padding: 0,
+                    margin: `0px`,
+                    color: `var(--text)`
                 }}
             >
-                <li>
+                <li style={{
+                  marginLeft: `0px`,
+                  maxWidth: `150px`,
+                  border: `1px solid var(--text)`,
+                  borderRadius: `3px`,
+                }}>
                     {previous && (
                         <Link to={previous.fields.slug} rel="prev">
                             {"<<"+previous.frontmatter.title}
                         </Link>
                     )}
                 </li>
-                <li>
+                <li style={{
+                  marginRight: `0px`,
+                  maxWidth: `150px`,
+                  border: `1px solid var(--text)`,
+                  borderRadius: `3px`,
+
+                }}>
                     {next && (
                         <Link to={next.fields.slug} rel="next">
                             {next.frontmatter.title + " >>"}

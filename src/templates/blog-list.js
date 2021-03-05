@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-// import SEO from "../components/seo"
-// import "../components/layout.css"
+
 
 const BlogList = ({ data, pageContext }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -12,27 +11,9 @@ const BlogList = ({ data, pageContext }) => {
   const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
   const nextPage = (currentPage + 1).toString()
 
-  //console.log(pageContext)
 
   return (
     <div location={pageContext.location} title={siteTitle}>
-      {/* <SEO
-        title={siteTitle}
-        keywords={[
-          `sigit`,
-          `priyanggoro`,
-          `sigit priyanggoro`,
-          `aws`,
-          `severless`,
-          `amplify`,
-          `appsync`,
-          `blog`,
-          `gatsby`,
-          `javascript`,
-          `react`,
-          `reactjs`,
-        ]}
-      /> */}
 
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
@@ -53,26 +34,11 @@ const BlogList = ({ data, pageContext }) => {
         )
       })}
       <div>
-        <ul
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            alignItems: "center",
-            listStyle: "none",
-            padding: 0,
-          }}
-        >
+        <ul>
           {!isFirst && (
             <Link
               to={prevPage}
               rel="prev"
-              style={{
-                marginTop: "0.1rem",
-                marginBottom: "0.1rem",
-                padding: "0.5rem",
-                color: "var(--headerColor)",
-              }}
             >
               {"<< Prev"}
             </Link>
@@ -86,30 +52,13 @@ const BlogList = ({ data, pageContext }) => {
             >
               <Link
                 to={`/${i === 0 ? "" : i + 1}`}
-                style={{
-                  marginTop: "0.1rem",
-                  marginBottom: "0.1rem",
-                  padding: "0.5rem",
-                  textDecoration: "none",
-                  color:
-                    i + 1 === currentPage ? "#ffffff" : "var(--headerColor)",
-                  background: i + 1 === currentPage ? "var(--headerColor)" : "",
-                }}
               >
                 {i + 1}
               </Link>
             </li>
           ))}
           {!isLast && (
-            <Link
-              to={nextPage}
-              rel="next"
-              style={{
-                marginTop: "0.1rem",
-                marginBottom: "0.1rem",
-                padding: "0.5rem",
-                color: "var(--headerColor)",
-              }}
+            <Link to={nextPage} rel="next" style={{fontSize: '30px'}}
             >
               {"Next >>"}
             </Link>
