@@ -26,6 +26,6 @@
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .blogpost--container{
-        margin: 1rem 10rem;
+        margin: 1rem 12rem;
     }
   }

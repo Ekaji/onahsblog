@@ -19,8 +19,7 @@ export default function BlogPost({ data, pageContext }) {
         <small>published {post.frontmatter.date}</small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <ul
-                style={{
+        <div style={{
                     display: `flex`,
                     flexDirection: `row`,
                     justifyContent: `space-between`,
@@ -28,34 +27,30 @@ export default function BlogPost({ data, pageContext }) {
                     padding: 0,
                     margin: `0px`,
                     color: `var(--text)`
-                }}
-            >
-                <li style={{
-                  marginLeft: `0px`,
-                  maxWidth: `150px`,
-                  border: `1px solid var(--text)`,
-                  borderRadius: `3px`,
                 }}>
+
                     {previous && (
-                        <Link to={previous.fields.slug} rel="prev">
+                        <Link style={{
+                          marginLeft: `0px`,
+                          maxWidth: `150px`,
+                          border: `1px solid var(--text)`,
+                          borderRadius: `3px`,
+                        }} to={previous.fields.slug} rel="prev">
                             {"<<"+previous.frontmatter.title}
                         </Link>
                     )}
-                </li>
-                <li style={{
-                  marginRight: `0px`,
-                  maxWidth: `150px`,
-                  border: `1px solid var(--text)`,
-                  borderRadius: `3px`,
 
-                }}>
                     {next && (
-                        <Link to={next.fields.slug} rel="next">
+                        <Link style={{
+                          marginRight: `0px`,
+                          maxWidth: `150px`,
+                          border: `1px solid var(--text)`,
+                          borderRadius: `3px`,
+                        }} to={next.fields.slug} rel="next">
                             {next.frontmatter.title + " >>"}
                         </Link>
                     )}
-                </li>
-            </ul>
+            </div>
             </div>
       </Layout>
   )
