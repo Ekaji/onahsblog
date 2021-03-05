@@ -9,20 +9,6 @@
     --animate-duration: 10s;
   }
 
-/* body{
-    margin: 0px;
-    padding: 0px;
-    background-color: var(--background-dark);
-    color:  var(--text);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
-} */
-
 .container{
     display: flex;
     flex-direction: column;
@@ -172,14 +158,6 @@
     border: 3px solid #067E79;
 }
 
-/* .card.blueskies, .card.landa{
-    margin-left: -90vw;
-} */
-
-/* .card.bookmark, .card.daytoday{
-    margin-right: -90vw;
-} */
-
 .card > a{
     text-decoration: none;
     color:  var(--text)
@@ -266,16 +244,21 @@
     margin:  auto;
 }
 
-.contact {
+.socials-icons {
+    width: 30%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-.contact > p,
-.contact > div,
-.socials > h2,
 .socials > div{
     margin-left: 6px;
+    margin-bottom: 5px;
+}
+
+.socials > p {
+    text-align: center;
+    margin-top: 3rem;
 }
 
 
@@ -314,8 +297,8 @@
     text-decoration: none;
 }
 
-.socials > p, .getintouch {
-    margin-bottom: -2px;
+.socials > p {
+    margin-bottom: 2rem;
 }
 
 .footer{
@@ -457,17 +440,9 @@
         height: 60vh;
         width: 35vw;
         border-radius: 10px;
-        /* margin: 20px auto; */
         overflow: hidden;
     }
 
-    /* .contact{
-        margin-top: -40vh;
-    } */
-
-.contact > p,
-.contact > div,
-.socials > h2,
 .socials > p,
 .socials > div{
     margin-left: 40px;

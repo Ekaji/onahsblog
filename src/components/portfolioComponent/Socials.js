@@ -2,26 +2,14 @@ import React from 'react'
 
 const Socials = () => {
     return(
-        <div className="socials">
-        {/* <p className="connect">CONNECT</p> */}
+    <div className="socials">
+            <p><a href="mailto:ekajionah@gmail.com?subject=Hello%20user" target="blank">ekajionah@gmail.com</a> </p>
         <div className="socials-icons">
-            <div className="github">
-                {/* <img src="https://img.icons8.com/ios-glyphs/48/000000/github.png" alt='social-icons'/> */}
-                <p><a href="https://github.com/Ekaji" target="blank">github</a> </p>
-            </div>
-            <div className="twiter">
-                {/* <img src="https://img.icons8.com/fluent/48/000000/twitter.png" alt='social-icons'/> */}
-                <p><a href="https://twitter.com/dev_Ekaji/" target="blank">twitter</a> </p>
-            </div>
-            <div className="linkedin">
-                {/* <img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt='social-icons'/> */}
-                <p><a href="https://www.linkedin.com/in/ekaji-onah-819564150/" target="blank">linkedin</a> </p>
-            </div>
+            <a href="https://github.com/Ekaji" target="blank">github</a>
+            <a href="https://twitter.com/dev_Ekaji/" target="blank">twitter</a>
+            <a href="https://www.linkedin.com/in/ekaji-onah-819564150/" target="blank">linkedin</a>
         </div>
-        <div className="footer">
-            <p>website designed and built by yours truly</p>
-            <p>&copy 2020</p>
-        </div>  
+            <p> &copy; 2021 </p> 
     </div>
     )
 }
