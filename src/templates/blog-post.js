@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from '../components/layout/Layout'
+import '../styles/blogPost.styles.css'
+
 // import Img from "gatsby-image"
 
 export default function BlogPost({ data, pageContext }) {
@@ -11,7 +13,7 @@ export default function BlogPost({ data, pageContext }) {
 
   return (
     <Layout>
-      <div style={{margin: '5px 1rem'}}>
+      <div className='blogpost--container'>
       {/* <Img fluid={featuredImgFluid} /> */}
         <h1>{post.frontmatter.title}</h1>
         <small>published {post.frontmatter.date}</small>
