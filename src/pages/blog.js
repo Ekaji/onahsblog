@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import { graphql, Link } from "gatsby"
 import Layout from '../components/layout/Layout'
 import '../styles/blog.styles.css'
-import mrcp from 'material-random-color-picker'
+// import mrcp from 'material-random-color-picker'
 // import Img from "gatsby-image"
 
 
@@ -37,7 +37,7 @@ export default function Blog({ data }) {
               <h2 className='post__title'>{post.frontmatter.title}</h2>
               <div className='post__info'>
                 <Link to={`/tags/${post.frontmatter.tags}`}>
-                  <h4 style={{display:'inline-block', backgroundColor: mrcp({color: 'blue', type: 'darken'}), color: 'white', borderRadius: '3px', padding: '7px 12px', margin: '30px 10px 10px'}}>{post.frontmatter.tags}
+                  <h4 style={{display:'inline-block',  color: 'var(--text)', border: '1px solid var(--border)', borderRadius: '3px', padding: '7px 12px', margin: '30px 10px 10px'}}>{post.frontmatter.tags}
                   </h4>
                 </Link>
                 {post.frontmatter.date}
@@ -63,7 +63,8 @@ export default function Blog({ data }) {
                    style={
                     {
                       listStyleType: 'none',
-                      backgroundColor: mrcp(),
+                      // backgroundColor: mrcp(),
+                      border: '1px solid var(--border)',
                       borderRadius: '3px',
                       padding: '7px 12px',
                     }

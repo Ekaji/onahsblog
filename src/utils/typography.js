@@ -9,6 +9,8 @@ sternGroveTheme.overrideThemeStyles = () => ({
     'body.light': {
         '--bg': ' #FFEBCF',
         '--text': '#374045',
+        '--blueish': '#0277BD',
+        '--border': 'var(--blueish)',
         backgroundColor: 'var(--bg)',
         color: 'var(--text)',
         fontFamily: 'Montserrat, sans-serif',
@@ -17,6 +19,8 @@ sternGroveTheme.overrideThemeStyles = () => ({
     'body.dark': {
         '--bg': '#374045',
         '--text': ' #FFEBCF',
+        '--greenish': '#1DE9B6',
+        '--border': 'var(--greenish)',
         backgroundColor: 'var(--bg)',
         color: 'var(--text)',
         fontFamily: 'Montserrat, sans-serif',
