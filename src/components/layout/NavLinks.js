@@ -11,9 +11,9 @@ const NavLinks = () => {
     return(
         <div className='navigation'>
         {/* <h1 className='blog__heading'>Ekaji Onah</h1> */}
-            {allLinks.map(link => ( 
-                <Link to={`${Object.values(link)}`} >
-                    <span>{Object.keys(link)}</span>
+            {allLinks.map((link, i) => ( 
+                <Link key={i} to={`${Object.values(link)}`} >
+                    <span key={i}>{Object.keys(link)}</span>
                 </Link>
             )
         )}

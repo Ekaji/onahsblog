@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import { graphql, Link } from "gatsby"
 import Layout from '../components/layout/Layout'
 import '../styles/blog.styles.css'
@@ -12,15 +12,17 @@ export default function Blog({ data }) {
   let allTags = posts.map(post => post.frontmatter.tags )
   let uniqueTags = [...new Set(allTags)]
 
-  const postCount = 5
-  const [postsToShow, setPostsToShow] = useState(postCount)
-  const [blogList, setBloglist] = useState(posts.slice(0, postsToShow))
+  const postCount = 1
+  const [postsToShow, setPostsToShow] = useState(1)
+  const [blogList, setBloglist] = useState(posts.slice(0, postCount))
 
   const handleLoadMorePosts = () => {
-    setPostsToShow( postsToShow + postCount)
-    setBloglist([...posts.slice(0, postsToShow) ])
-  }
+    setPostsToShow(postCount => postCount + 2 )
+ }
 
+  useEffect(() => {
+    setBloglist( [...posts.slice(0 ,  postsToShow ) ] );
+  },[posts, postsToShow])
   
   return (
 <Layout>
@@ -53,7 +55,7 @@ export default function Blog({ data }) {
      </div>
 
      <div style={{textAlign: 'center', margin: 'auto'}} >
-      <button   onClick={ handleLoadMorePosts }>loadMore</button>
+      <button   onClick={  handleLoadMorePosts }>loadMore</button>
     </div>
 
      <aside className='tag'>
