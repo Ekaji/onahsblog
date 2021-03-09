@@ -54,8 +54,8 @@ export default function Blog({ data }) {
       } 
      </div>
 
-     <div style={{textAlign: 'center', margin: 'auto'}} >
-      <button   onClick={  handleLoadMorePosts }>loadMore</button>
+     <div style={{textAlign: 'center', margin: 'auto', }} >
+      <button style={{backgroundColor: 'transparent', color: 'var(--text)', outline: 'none', border: '1px solid var(--border)', borderRadius: '3px', padding: '7px 12px' }}  onClick={  handleLoadMorePosts }>loadMore</button>
     </div>
 
      <aside className='tag'>
