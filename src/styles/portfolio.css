@@ -244,7 +244,7 @@
 }
 
 .socials-icons {
-    width: 30%;
+    /* width: 30%; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -280,26 +280,6 @@
     margin-left: 10px;
 }
 
-.socials-icons {
-    display: flex;
-}
-
-.socials-icons > div{
-    display: flex;
-    font-size: 15px;
-    /* margin-right: 10px; */
-}
-
-.socials-icons > div > p > a,
-.email > div > p > a {
-    color:  var(--border-dark);
-    text-decoration: none;
-}
-
-.socials > p {
-    margin-bottom: 2rem;
-}
-
 .footer{
     text-align: center;
 }
@@ -327,9 +307,6 @@
     .about{
         height: 150vh;
     }
-   .socials-icons{
-       flex-direction:column;
-   }
 }
 
 
@@ -351,6 +328,12 @@
 
     .my-stack{
         width: 80vw;
+    }
+    .socials-icons {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
@@ -442,8 +425,9 @@
         overflow: hidden;
     }
 
-.socials > p,
-.socials > div{
-    margin-left: 40px;
-}
+    .socials-icons {
+        width: 30%;
+        justify-content: space-between;
+    }
+
   }
