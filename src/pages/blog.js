@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react"
 import { graphql, Link } from "gatsby"
 import Layout from '../components/layout/Layout'
 import '../styles/blog.styles.css'
-// import mrcp from 'material-random-color-picker'
 // import Img from "gatsby-image"
 
 
@@ -12,12 +11,12 @@ export default function Blog({ data }) {
   let allTags = posts.map(post => post.frontmatter.tags )
   let uniqueTags = [...new Set(allTags)]
 
-  const postCount = 1
-  const [postsToShow, setPostsToShow] = useState(1)
-  const [blogList, setBloglist] = useState(posts.slice(0, postCount))
+  const postCount = 5
+  const [postsToShow, setPostsToShow] = useState(postCount)
+  const [blogList, setBloglist] = useState(posts.slice(0, postsToShow))
 
   const handleLoadMorePosts = () => {
-    setPostsToShow(postCount => postCount + 2 )
+    setPostsToShow(postCount => postCount + 5 )
  }
 
   useEffect(() => {
@@ -65,7 +64,6 @@ export default function Blog({ data }) {
                    style={
                     {
                       listStyleType: 'none',
-                      // backgroundColor: mrcp(),
                       border: '1px solid var(--border)',
                       borderRadius: '3px',
                       padding: '7px 12px',

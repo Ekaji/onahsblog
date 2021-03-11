@@ -14,22 +14,24 @@ sternGroveTheme.overrideThemeStyles = () => ({
         backgroundColor: 'var(--bg)',
         color: 'var(--text)',
         fontFamily: 'Montserrat, sans-serif',
+        'overflow-x': 'hidden'
     },
     
     'body.dark': {
-        '--bg': '#374045',
+        '--bg': '#000000',
         '--text': ' #FFEBCF',
         '--greenish': '#1DE9B6',
         '--border': 'var(--greenish)',
         backgroundColor: 'var(--bg)',
         color: 'var(--text)',
         fontFamily: 'Montserrat, sans-serif',
+        'overflow-x': 'hidden'
     },
     p : {
         fontSize: '14.4px',
         letterSpacing: '1.1px'
     },
-    'h1,h2': {
+    'h1,h2,h3': {
         color: 'var(--text)',
     },
     h2: {

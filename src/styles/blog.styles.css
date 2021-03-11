@@ -32,7 +32,7 @@
 }
 
 .link--color{
-    color: black;
+    color: var(--text);
     letter-spacing: 2px;
 }
 
@@ -40,7 +40,7 @@
     position: relative;
     margin-bottom: 20px ;
     border-radius: 3px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(79, 78, 82, 0.19) 0px 10px 20px, rgba(105, 104, 109, 0.23) 0px 6px 6px;
     /* height: 340px; */
     height: 150px;
 }
