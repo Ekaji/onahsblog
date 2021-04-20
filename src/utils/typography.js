@@ -28,7 +28,7 @@ sternGroveTheme.overrideThemeStyles = () => ({
         'overflow-x': 'hidden'
     },
     p : {
-        fontSize: '14.4px',
+        fontSize: '18px',
         letterSpacing: '1.1px'
     },
     'h1,h2,h3': {

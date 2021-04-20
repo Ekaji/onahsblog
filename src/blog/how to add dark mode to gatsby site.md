@@ -26,7 +26,7 @@ plugins: [
     ' gatsby-plugin-dark-mode'
 ]
 ```
-next create a new component i named mine ThemeSwitch
+next create a new component, i named mine ThemeSwitch
 
 ```
 //ThemeSwitch.js
@@ -56,7 +56,7 @@ export default ThemeSwitch
 
 then import the ThemeSWitch component into your layout component file.
 
-if you go to your website you should see the theme switch but if you click the toggle it does nothing but if you go to the dev tools and inspect it you should see the class on the body element toggle between 'light' and 'dark
+if you go to your website you should see the theme switch but if you click the toggle it does nothing, but if you go to the dev tools and inspect it you should see the class on the body element toggle between 'light' and 'dark
 we would use this to set our theme, in the css file your using in your layout.js add your styles for your prefered light and dark mode using css variables.
 
 ```
