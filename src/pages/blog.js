@@ -70,7 +70,7 @@ export default function Blog({ data }) {
                     }
                   }
                   >
-                    <Link className='link--color' key={i} to={`/tags/${uniquetag}`}>
+                    <Link className='link--color' key={i} to={`/tags/${uniquetag.toLowerCase()}`}>
                       {uniquetag}
                     </Link>
                   </div>

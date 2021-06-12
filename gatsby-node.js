@@ -23,7 +23,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`)
   const tagTemplate = path.resolve(`./src/templates/tags.js`)
 
-  //limit was 2000
+
   const result = await graphql(`
   query loadSlugQuery ($limit: Int!){
       postsRemark: allMarkdownRemark(
@@ -116,24 +116,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
 
-// const posts = result.data.postsRemark.edges
-
-//  posts.forEach(({ node }) => {
-
-//         createPage({
-//           path: node.fields.slug,
-//           component: blogPostTemplate,
-//           context: {
-//             // Data passed to context is available
-//             // in page queries as GraphQL variables.
-//             slug: node.fields.slug,
-//           },
-//         })
-//       })
-
     })
 
 
 }
-
-//resolve conflicts between posts

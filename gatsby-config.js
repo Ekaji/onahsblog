@@ -38,7 +38,6 @@ plugins: [
       path: `${__dirname}/src/images/`,
     },
   },
-  // `gatsby-transformer-remark`,
   `gatsby-plugin-dark-mode`,
   {
     resolve: `gatsby-transformer-remark`,

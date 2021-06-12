@@ -27,7 +27,8 @@ const TagsPage = ({
         {group.map(tag => (
         <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
           <li className='tag__list' key={tag.fieldValue}>
-              {tag.fieldValue} ({tag.totalCount})
+              {tag.fieldValue} 
+              ({tag.totalCount})
           </li>
         </Link>
 
@@ -58,7 +59,8 @@ TagsPage.propTypes = {
 
 export default TagsPage
 
-export const pageQuery = graphql`
+export const pageQuery = graphql
+`
   query {
     site {
       siteMetadata {
