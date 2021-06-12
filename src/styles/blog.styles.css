@@ -40,11 +40,12 @@
 .post{
     position: relative;
     margin-bottom: 20px ;
-    border-radius: 3px;
+    border-radius: 10px;
     background-color: var(--card);
     /* box-shadow: rgba(79, 78, 82, 0.19) 0px 10px 20px, rgba(105, 104, 109, 0.23) 0px 6px 6px */
     /* height: 340px; */
-    height: 200px;
+    min-height: 200px;
+    max-height: 250px;
 }
 
 .post__title{
