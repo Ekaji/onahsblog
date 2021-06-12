@@ -44,7 +44,7 @@
     background-color: var(--card);
     /* box-shadow: rgba(79, 78, 82, 0.19) 0px 10px 20px, rgba(105, 104, 109, 0.23) 0px 6px 6px */
     /* height: 340px; */
-    height: 150px;
+    height: 180px;
 }
 
 .post__title{
@@ -67,7 +67,7 @@
     bottom: 5px;
 }
 
-.post__info > span {
+.post__info > div {
     color:  var(--text)
 }
 

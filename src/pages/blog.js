@@ -42,7 +42,7 @@ export default function Blog({ data }) {
                       fontSize: '16px', margin: '30px 10px 10px'}}>{post.frontmatter.tags}
                   </h4>
                 </Link>
-                <span>{post.frontmatter.date}</span>
+                <div style={{margin: '10px'}}>{post.frontmatter.date}</div>
               </div>
           </Link>
           </article>

@@ -36,7 +36,6 @@ export default function BlogPost({ data, pageContext }) {
                           marginLeft: `0px`,
                           color: `var(--blue)`,
                           maxWidth: `250px`,
-                          // border: `1px solid var(--text)`,
                           borderRadius: `3px`,
                         }} to={previous.fields.slug} rel="prev">
                             {"<<"+previous.frontmatter.title}
@@ -50,7 +49,6 @@ export default function BlogPost({ data, pageContext }) {
                         <Link style={{
                           marginRight: `0px`,
                           color: `var(--blue)`,
-                          // border: `1px solid var(--text)`,
                           borderRadius: `3px`,
                         }} to={next.fields.slug} rel="next">
                             {next.frontmatter.title + " >>"}
