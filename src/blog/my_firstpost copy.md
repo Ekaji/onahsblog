@@ -6,6 +6,7 @@ tags: javascript
 featuredImage: ../images/starwar.jpg
 ---
 
+#
 ## Introduction to my blog post 1
 
 Great content of my first blog

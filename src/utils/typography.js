@@ -6,11 +6,18 @@ sternGroveTheme.baseFontSize = '18px'
 sternGroveTheme.bodyTypeFace = 'roboto'
 
 sternGroveTheme.overrideThemeStyles = () => ({
+    'body': {
+        '--light-text': '#fff',
+        wordSpacing: '5px',
+        lineHeight: '30px'
+    },
+
     'body.light': {
-        '--bg': ' #FFEBCF',
+        '--bg': ' #FFF',
         '--text': '#374045',
-        '--blueish': '#0277BD',
+        '--blue': '#304FFE',
         '--border': 'var(--blueish)',
+        '--card': '#ECEFF1',
         backgroundColor: 'var(--bg)',
         color: 'var(--text)',
         fontFamily: 'Montserrat, sans-serif',
@@ -19,9 +26,10 @@ sternGroveTheme.overrideThemeStyles = () => ({
     
     'body.dark': {
         '--bg': '#000000',
+        '--blue': '#304FFE',
         '--text': ' #FFEBCF',
-        '--greenish': '#1DE9B6',
         '--border': 'var(--greenish)',
+        '--card': '#111111',
         backgroundColor: 'var(--bg)',
         color: 'var(--text)',
         fontFamily: 'Montserrat, sans-serif',
@@ -29,7 +37,6 @@ sternGroveTheme.overrideThemeStyles = () => ({
     },
     p : {
         fontSize: '18px',
-        letterSpacing: '1.1px'
     },
     'h1,h2,h3': {
         color: 'var(--text)',

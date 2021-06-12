@@ -6,6 +6,7 @@ tags: gatsby
 featuredImage: ../images/starwar.jpg
 ---
 
+#
 ## Introduction to my blog post
 
 Great content of my first blog

@@ -38,10 +38,11 @@ export default function Blog({ data }) {
               <h2 className='post__title'>{post.frontmatter.title}</h2>
               <div className='post__info'>
                 <Link to={`/tags/${post.frontmatter.tags}`}>
-                  <h4 style={{display:'inline-block',  color: 'var(--text)', border: '1px solid var(--border)', borderRadius: '3px', padding: '7px 12px', margin: '30px 10px 10px'}}>{post.frontmatter.tags}
+                  <h4 style={{display:'inline-block',backgroundColor: 'var(--blue)',  color: 'var(--light-text)', borderRadius: '30px', padding: '10px 20px',
+                      fontSize: '16px', margin: '30px 10px 10px'}}>{post.frontmatter.tags}
                   </h4>
                 </Link>
-                {post.frontmatter.date}
+                <span>{post.frontmatter.date}</span>
               </div>
           </Link>
           </article>
@@ -54,7 +55,7 @@ export default function Blog({ data }) {
      </div>
 
      <div style={{textAlign: 'center', margin: 'auto', }} >
-      <button style={{backgroundColor: 'transparent', color: 'var(--text)', outline: 'none', border: '1px solid var(--border)', borderRadius: '3px', padding: '7px 12px' }}  onClick={  handleLoadMorePosts }>loadMore</button>
+      <button style={{backgroundColor: 'var(--blue)', color: 'var(--light-text)', border: 'none', outline: 'none', borderRadius: '30px', padding: '10px 20px', fontSize: '16px' }}  onClick={  handleLoadMorePosts }>loadMore</button>
     </div>
 
      <aside className='tag'>
@@ -64,9 +65,11 @@ export default function Blog({ data }) {
                    style={
                     {
                       listStyleType: 'none',
-                      border: '1px solid var(--border)',
-                      borderRadius: '3px',
-                      padding: '7px 12px',
+                      backgroundColor: 'var(--blue)',
+                      borderRadius: '30px',
+                      padding: '5px 20px',
+                      fontSize: '16px',
+                      color: 'var(--light-text)'
                     }
                   }
                   >

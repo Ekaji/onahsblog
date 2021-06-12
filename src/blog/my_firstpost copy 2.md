@@ -6,6 +6,7 @@ tags: html
 featuredImage: ../images/374482.jpg
 ---
 
+#
 ## Introduction to my blog post 2
 
 Great content of my first blog

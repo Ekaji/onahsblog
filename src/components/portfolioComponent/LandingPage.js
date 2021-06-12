@@ -25,7 +25,7 @@ const [greeting, setGreeting] = useState((Object.values(helloArray[0])))
     }
     updateGreeting()
     return () => clearTimeout(updateGreeting);
-    },[helloArray])
+    },[])
 
     return(
         <div id='Home' className="landing"> 

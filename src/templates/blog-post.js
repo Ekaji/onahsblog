@@ -30,25 +30,32 @@ export default function BlogPost({ data, pageContext }) {
                 }}>
 
                     {previous && (
+                      <div style={{ maxWidth: `250px` }}>
+                        <h3>Previous</h3>
                         <Link style={{
                           marginLeft: `0px`,
-                          maxWidth: `150px`,
-                          border: `1px solid var(--text)`,
+                          color: `var(--blue)`,
+                          maxWidth: `250px`,
+                          // border: `1px solid var(--text)`,
                           borderRadius: `3px`,
                         }} to={previous.fields.slug} rel="prev">
                             {"<<"+previous.frontmatter.title}
                         </Link>
+                      </div>
                     )}
 
                     {next && (
+                      <div style={{ maxWidth: `250px` }}>
+                        <h3>Next</h3>
                         <Link style={{
                           marginRight: `0px`,
-                          maxWidth: `150px`,
-                          border: `1px solid var(--text)`,
+                          color: `var(--blue)`,
+                          // border: `1px solid var(--text)`,
                           borderRadius: `3px`,
                         }} to={next.fields.slug} rel="next">
                             {next.frontmatter.title + " >>"}
                         </Link>
+                      </div>
                     )}
             </div>
             </div>
