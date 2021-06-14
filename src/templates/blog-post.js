@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from '../components/layout/Layout'
 import '../styles/blogPostMediaQueries.styles.css'
+import SEO from '../components/SEO/seo'
 
 // import Img from "gatsby-image"
 
@@ -13,6 +14,7 @@ export default function BlogPost({ data, pageContext }) {
 
   return (
     <Layout>
+      <SEO title={post.frontmatter.title} />
       <div className='blogpost--container'>
       {/* <Img fluid={featuredImgFluid} /> */}
         <h1>{post.frontmatter.title}</h1>

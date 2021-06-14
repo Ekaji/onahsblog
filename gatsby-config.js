@@ -6,8 +6,13 @@
 module.exports = {
   /* Your site config here */
 siteMetadata: {
-  title: 'Onahs_Blog',
-  description: 'This is a tech blog by ekaji onah'  
+  title: `Onahs_Blog`,
+  description: `Blog on Programing and web developement`,
+  author: `Ekaji_Onah`,
+  image: `/src/images/nature-3293045_1280.jpg`,
+  url: 'onahsblog.vercel.app',
+  keywords: ``,
+
 },
 plugins: [
   {
@@ -30,6 +35,7 @@ plugins: [
       pathToConfigModule: `src/utils/typography`,
     },
   },
+  `gatsby-plugin-react-helmet`,
   `gatsby-plugin-sharp`, 
   `gatsby-transformer-sharp`,
   {
