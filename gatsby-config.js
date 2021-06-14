@@ -9,7 +9,7 @@ siteMetadata: {
   title: `Onahs_Blog`,
   description: `Blog on Programing and web developement`,
   author: `Ekaji_Onah`,
-  image: `/src/images/nature-3293045_1280.jpg`,
+  image: `/src/images/nature.jpg`,
   url: `onahsblog.vercel.app`,
   keywords: ``,
 
