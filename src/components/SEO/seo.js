@@ -32,6 +32,7 @@ const SEO = ({ description, lang, meta, title}) => {
         }}
         title={title}
         titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+        
         meta={[
           {
             name: `description`,
@@ -78,7 +79,9 @@ const SEO = ({ description, lang, meta, title}) => {
             content: metaDescription,
           },
         ].concat(meta)}
-      />
+      >
+        <meta name="google-site-verification" content="EYzIIkGdKLFWwCqQeowPHegFyKSQqFNxU3Z5Bov0tlA" />
+      </Helmet >
     )
   }
   
