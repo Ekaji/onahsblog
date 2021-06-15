@@ -24,6 +24,7 @@ const SEO = ({ description, lang, meta, title}) => {
     const keywords = site.siteMetadata.keywords
     const metaDescription = description || site.siteMetadata.description
     const defaultTitle = site.siteMetadata?.title
+    // const google-site-verification
   
     return (
       <Helmet
@@ -80,7 +81,7 @@ const SEO = ({ description, lang, meta, title}) => {
           },
         ].concat(meta)}
       >
-        <meta name="google-site-verification" content="EYzIIkGdKLFWwCqQeowPHegFyKSQqFNxU3Z5Bov0tlA" />
+        {/* <meta name="google-site-verification" content="EYzIIkGdKLFWwCqQeowPHegFyKSQqFNxU3Z5Bov0tlA" data-react-helmet="true" /> */}
       </Helmet >
     )
   }
