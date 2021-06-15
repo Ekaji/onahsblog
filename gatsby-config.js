@@ -3,6 +3,12 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+
+ require(`dotenv`).config({
+  path: `.env`,
+})
+
+
 module.exports = {
   /* Your site config here */
 siteMetadata: {
@@ -15,6 +21,14 @@ siteMetadata: {
 
 },
 plugins: [
+  {
+    resolve: `gatsby-plugin-google-gtag`,
+    options: {
+      trackingIds: [
+        process.env.GOOGLE_MEASUREMENT_ID, // Google Analytics / GA
+      ],
+    },
+  },
   {
     resolve: `gatsby-source-filesystem`,
     options: {
