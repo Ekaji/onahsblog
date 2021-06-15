@@ -20,7 +20,7 @@ const SEO = ({ description, lang, meta, title}) => {
         }
       `
     )
-    const image = site.siteMetadata.image
+    const image = { src: site.siteMetadata.image, width: 1200, height: 670 }
     const keywords = site.siteMetadata.keywords
     const metaDescription = description || site.siteMetadata.description
     const defaultTitle = site.siteMetadata?.title
