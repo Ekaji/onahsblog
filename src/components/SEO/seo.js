@@ -20,11 +20,10 @@ const SEO = ({ description, lang, meta, title}) => {
         }
       `
     )
-    const image = { src: site.siteMetadata.image, width: 1200, height: 670 }
+    const image = site.siteMetadata.image
     const keywords = site.siteMetadata.keywords
     const metaDescription = description || site.siteMetadata.description
     const defaultTitle = site.siteMetadata?.title
-
   
     return (
       <Helmet
@@ -56,7 +55,7 @@ const SEO = ({ description, lang, meta, title}) => {
           },
           {
             property: `og:image`,
-            content: image.src,
+            content: image,
           },
           {
             name: `twitter:card`,
@@ -64,7 +63,7 @@ const SEO = ({ description, lang, meta, title}) => {
           },
           {
             name: `twitter:image`,
-            content: image.src,
+            content: image,
           },
           {
             name: `twitter:creator`,
