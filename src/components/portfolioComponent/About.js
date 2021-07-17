@@ -1,5 +1,5 @@
 import React from 'react'
-import avata from '../../images/portfolioImages/avataaars.png'
+import avata from '../../images/portfolioImages/avataaars.webp'
 
 
 const About = () => {
